@@ -1,6 +1,7 @@
 package net.MyName.honahula;
 
 import com.mojang.logging.LogUtils;
+import net.MyName.honahula.item.ModCreativeModeTabs;
 import net.MyName.honahula.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +26,8 @@ public class honahula {
 
     public honahula(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
