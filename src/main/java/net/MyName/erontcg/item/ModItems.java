@@ -1,18 +1,16 @@
-package net.MyName.honahula.item;
+package net.MyName.erontcg.item;
 
-import net.MyName.honahula.honahula;
+import net.MyName.erontcg.erontcg;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Objects;
-
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, honahula.Mod_ID);
-
+            DeferredRegister.create(ForgeRegistries.ITEMS, erontcg.Mod_ID);
+//this is how you add new items see episode 2
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
 

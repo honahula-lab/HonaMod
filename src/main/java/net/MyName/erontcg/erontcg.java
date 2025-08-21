@@ -1,8 +1,9 @@
-package net.MyName.honahula;
+package net.MyName.erontcg;
 
 import com.mojang.logging.LogUtils;
-import net.MyName.honahula.item.ModCreativeModeTabs;
-import net.MyName.honahula.item.ModItems;
+import net.MyName.erontcg.block.ModBlocks;
+import net.MyName.erontcg.item.ModCreativeModeTabs;
+import net.MyName.erontcg.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,19 +18,19 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(honahula.Mod_ID)
-public class honahula {
-    // Define mod id in a common place for everything to reference
-    public static final String Mod_ID = "honahula";
-    // Directly reference a slf4j logger
+@Mod(erontcg.Mod_ID)
+public class erontcg {
+    public static final String Mod_ID = "erontcg";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public honahula(FMLJavaModLoadingContext context) {
+    public erontcg(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
